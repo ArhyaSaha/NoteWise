@@ -4,6 +4,9 @@
 }
 
 body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 60px;
   font-family: 'Poppins', sans-serif;
   background-color: var(--background-color);
   color: var(--bs-primary-rgb);
@@ -12,7 +15,12 @@ body {
   background-image: url(../img/noise-bg.png);
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Unbounded', cursive;
   font-weight: 800;
 }
@@ -35,7 +43,7 @@ h1,h2,h3,h4,h5,h6 {
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #0043a8;
   --bs-btn-hover-border-color: #0043a8;
-  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--bs-primary-rgb);
   --bs-btn-active-border-color: var(--bs-primary-rgb);
@@ -51,7 +59,7 @@ h1,h2,h3,h4,h5,h6 {
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #0043a8;
   --bs-btn-hover-border-color: #0043a8;
-  --bs-btn-focus-shadow-rgb: 13,110,253;
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--bs-primary-rgb);
   --bs-btn-active-border-color: var(--bs-primary-rgb);
@@ -72,7 +80,7 @@ h1,h2,h3,h4,h5,h6 {
 /* Home */
 @media (min-width: 1200px) {
   .home {
-    background: 
+    background:
       url('../img/human-1.svg') left bottom no-repeat,
       url('../img/human-2.svg') right bottom no-repeat,
       url('../img/noise-bg.svg') left top repeat,
@@ -93,4 +101,20 @@ h1,h2,h3,h4,h5,h6 {
   position: absolute;
   right: -50px;
   bottom: -30px;
+}
+
+dt {
+  font-size: 1.5rem;
+}
+
+dd {
+  margin-bottom: 1.4rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+  height: 25px;
+  z-index: 1;
 }

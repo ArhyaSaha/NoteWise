@@ -26,10 +26,10 @@ exports.dashboard = async (req, res) => {
           body: { $substr: ["$body", 0, 100] },
         },
       }
-      ])
-    .skip(perPage * page - perPage)
-    .limit(perPage)
-    .exec(); 
+    ])
+      .skip(perPage * page - perPage)
+      .limit(perPage)
+      .exec();
 
     const count = await Note.count();
 
@@ -41,7 +41,7 @@ exports.dashboard = async (req, res) => {
       current: page,
       pages: Math.ceil(count / perPage)
     });
- 
+
     // Original Code
     // Note.aggregate([
     //   { $sort: { updatedAt: -1 } },
@@ -152,12 +152,16 @@ exports.dashboardAddNoteSubmit = async (req, res) => {
  * Search
  */
 exports.dashboardSearch = async (req, res) => {
+  const locals = {
+    title: "Search Results",
+  };
   try {
     res.render("dashboard/search", {
       searchResults: "",
+      locals,
       layout: "../views/layouts/dashboard",
     });
-  } catch (error) {}
+  } catch (error) { }
 };
 
 /**

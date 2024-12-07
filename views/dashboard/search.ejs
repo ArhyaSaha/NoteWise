@@ -3,12 +3,17 @@
   <div class="row">
     <% if(searchResults != '') { %>
       <% searchResults.forEach(function (note, index) { %>
-        
-        <a href="/dashboard/item/<%= note._id %>">
-        <h4><%= note.title %></h4>
-        </a>
 
-      <% }) %>
+      <div class="col-sm-3 mb-4">
+        <div class="card border-primary" style="min-height: 210px">
+          <a href="/dashboard/item/<%= note._id %>" class="card-body text-decoration-none">
+            <h5 class="card-title"><%= note.title %></h5>
+            <p class="card-text"><%= note.body %></p>
+          </a>
+        </div>
+      </div>
+    <%  }) %>
+
     <% } else { %>
       <p>No items found.</p>
     <% } %>
